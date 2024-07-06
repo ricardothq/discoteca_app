@@ -3,7 +3,7 @@
 
         <div class="connect-sorting">
 
-            <h5 class="text-center mb-2">DENOMINACIONES</h5>
+            {{-- <h5 class="text-center mb-2">DENOMINACIONES</h5>
 
             <div class="container">
                 <div class="row">
@@ -16,7 +16,7 @@
                         </div>
                     @endforeach
                 </div>
-            </div>
+            </div> --}}
             <div class="connect-sorting-content mt-4">
                 <div class="card simple-title-task ui-sortable-handle">
                     <div class="card-body">
@@ -42,7 +42,7 @@
                                 </span>
                             </div>
                         </div>
-                        <h4 class="text-muted">Cambio: ${{ number_format($change, 2) }}</h4>
+                        <h4 class="text-muted">Cambio: Bs. {{ number_format($change, 2) }}</h4>
 
                         <div class="row justify-content-between mt-5">
                             <div class="col-sm-12 col-md-12 col-lg-6">

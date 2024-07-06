@@ -3,8 +3,8 @@
         <ul class="navbar-item flex-row">
             <li class="nav-item theme-logo">
                 <a href="index.html">
-                    <img src="assets/img/gentek.jpg" class="navbar-logo" alt="logo">
-                    <b style="font-size: 30px; color:#3B3F5C"> GENTEK</b>
+                    <img src="assets/img/martina.jpg" class="navbar-logo" alt="logo">
+                    <b style="font-size: 30px; color:#3B3F5C">MARTINA</b>
                 </a>
             </li>
         </ul>
