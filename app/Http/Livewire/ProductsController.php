@@ -91,6 +91,9 @@ class ProductsController extends Component
             $this->image->storeAs('public/products', $customFileName);
             $product->image = $customFileName;
             $product->save();
+        } else {
+            $product->image = 'noimage.png';
+            $product->save();
         }
 
         $this->resetUI();
@@ -188,13 +191,13 @@ class ProductsController extends Component
         $imageTemp = $product->image;
         $product->delete();
 
-        if ($imageTemp != null) {
+        if ($imageTemp != 'noimage.png') {
             if (file_exists('storage/products/' . $imageTemp)) {
                 unlink('storage/products/' . $imageTemp);
             }
         }
 
         $this->resetUI();
-        $this->emit('product-deleted', '{Producto Eliminado');
+        $this->emit('product-deleted', 'Producto Eliminado');
     }
 }

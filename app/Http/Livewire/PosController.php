@@ -49,7 +49,6 @@ class PosController extends Component
 
     public function ScanCode($barcode, $cant = 1)
     {
-        //dd($barcode);
         $product = Product::where('barcode', $barcode)->first();
 
         if ($product == null /* || empty($empty) */) {
@@ -135,7 +134,6 @@ class PosController extends Component
 
     public function removeItem($productId)
     {
-        dd($productId);
         Cart::remove($productId);
 
         $this->total = Cart::getTotal();
@@ -201,7 +199,7 @@ class PosController extends Component
             if ($sale) {
                 $items = Cart::getContent();
                 foreach ($items as $item) {
-                    SaleDetail::create([
+                    SaleDetails::create([
                         'price' => $item->price,
                         'quantity' => $item->quantity,
                         'product_id' => $item->id,
