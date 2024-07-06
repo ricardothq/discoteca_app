@@ -5,7 +5,8 @@
     <div class="col-sm-12 col-md-8">
         <div class="form-group">
             <label>Nombre</label>
-            <input type="text" wire:model.lazy="name" class="form-control" placeholder="ej: Luis Fax">
+            <input type="text" wire:model.lazy="name" class="form-control"
+                placeholder="Inserte el Nombre del Nuevo usuario">
             @error('name')
                 <span class="text-danger er">{{ $message }}</span>
             @enderror
@@ -14,8 +15,8 @@
     <div class="col-sm-12 col-md-4">
         <div class="form-group">
             <label>Telefono</label>
-            <input type="text" wire:model.lazy="phone" class="form-control" placeholder="ej: 351 115 9550"
-                maxlenght="10">
+            <input type="text" wire:model.lazy="phone" class="form-control"
+                placeholder="Inserte el numero de Telefono" maxlenght="10">
             @error('phone')
                 <span class="text-danger er">{{ $message }}</span>
             @enderror
@@ -24,7 +25,7 @@
     <div class="col-sm-12 col-md-6">
         <div class="form-group">
             <label>Email</label>
-            <input type="text" wire:model.lazy="email" class="form-control" placeholder="ej: luisfaax@gmail.com">
+            <input type="text" wire:model.lazy="email" class="form-control" placeholder="Inserte el Email">
             @error('email')
                 <span class="text-danger er">{{ $message }}</span>
             @enderror
@@ -43,7 +44,7 @@
         <div class="form-group">
             <label>Estados</label>
             <select wire:model.lazy="status" class="form-control">
-                <option value="Elegir" selected>Elegir</option>
+                <option value="Elegir" selected>Elegir estado</option>
                 <option value="Active" selected>Activo</option>
                 <option value="Locked" selected>Bloqueado</option>
             </select>
@@ -54,9 +55,9 @@
     </div>
     <div class="col-sm-12 col-md-6">
         <div class="form-group">
-            <label>Asignar role</label>
+            <label>Asignar rol</label>
             <select wire:model.lazy="profile" class="form-control">
-                <option value="Elegir" selected>Elegir</option>
+                <option value="Elegir" selected>Elegir rol</option>
                 @foreach ($roles as $role)
                     <option value="{{ $role->name }}" selected>{{ $role->name }}</option>
                 @endforeach
