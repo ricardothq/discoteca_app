@@ -48,10 +48,10 @@
                                     </td>
 
                                     <td class="text-center">
-                                        @if ($r->image != null)
+                                        <span>
                                             <img src="{{ asset('storage/users/' . $r->image) }}" alt="imagen"
-                                                class="card-img-top img-fluid">
-                                        @endif
+                                                height = "70" width="80" class="rounded">
+                                        </span>
                                     </td>
                                     <td class="text-center">
                                         <a href="javascript:void(0)" wire:click="edit({{ $r->id }})"
